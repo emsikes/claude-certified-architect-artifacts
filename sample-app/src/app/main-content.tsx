@@ -37,7 +37,7 @@ export function MainContent({ user, project }: MainContentProps) {
     <FileSystemProvider initialData={project?.data}>
       <ChatProvider projectId={project?.id} initialMessages={project?.messages}>
         <div className="h-screen w-screen overflow-hidden bg-neutral-50">
-          <ResizablePanelGroup direction="horizontal" className="h-full">
+          <ResizablePanelGroup id="main-layout" direction="horizontal" className="h-full">
             {/* Left Panel - Chat */}
             <ResizablePanel defaultSize={35} minSize={25} maxSize={50}>
               <div className="h-full flex flex-col bg-white">
@@ -65,6 +65,7 @@ export function MainContent({ user, project }: MainContentProps) {
                     onValueChange={(v) =>
                       setActiveView(v as "preview" | "code")
                     }
+                    id="view-tabs"
                   >
                     <TabsList className="bg-white/60 border border-neutral-200/60 p-0.5 h-9 shadow-sm">
                       <TabsTrigger value="preview" className="data-[state=active]:bg-white data-[state=active]:text-neutral-900 data-[state=active]:shadow-sm text-neutral-600 px-4 py-1.5 text-sm font-medium transition-all">Preview</TabsTrigger>
@@ -82,6 +83,7 @@ export function MainContent({ user, project }: MainContentProps) {
                     </div>
                   ) : (
                     <ResizablePanelGroup
+                      id="code-layout"
                       direction="horizontal"
                       className="h-full"
                     >
