@@ -23,20 +23,21 @@ Covers all five exam domains through hands-on code samples, mini-projects, and r
 
 ## Repo Structure
 
+One top-level directory per course. Sample projects live as subdirectories within each course folder.
+
 ```
 /
 ├── .claude/
-│   ├── CLAUDE.md               # Project memory — exam context, conventions
-│   ├── commands/               # Custom slash commands
-│   └── skills/                 # Agent skills
-├── domain-1-agentic/           # Agentic Architecture & Orchestration (27%)
-├── domain-2-claude-code/       # Claude Code Configuration & Workflows (20%)
-├── domain-3-prompt-eng/        # Prompt Engineering & Structured Output (20%)
-├── domain-4-mcp/               # Tool Design & MCP Integration (18%)
-├── domain-5-context/           # Context Management & Reliability (15%)
-├── scenarios/                  # Full scenario walkthroughs
-├── scratch/                    # Throwaway experiments (gitignored)
-├── .env.example                # Required environment variables
+│   └── settings.example.json   # Claude Code settings template
+├── .github/
+│   └── workflows/              # CI workflows
+├── claude-code-in-action/      # Course: Claude Code in Action ✓
+│   ├── sample-app/
+│   └── queries-app/
+├── building-with-claude-api/   # Course: Building with the Claude API
+├── intro-to-mcp/               # Course: Introduction to MCP
+├── mcp-advanced/               # Course: MCP Advanced Topics
+├── intro-to-agent-skills/      # Course: Introduction to Agent Skills
 ├── .gitignore
 └── README.md
 ```
@@ -162,7 +163,7 @@ The exam randomly selects 4 of these 6 scenarios. All questions anchor to the se
 
 ## Progress Tracker
 
-- [ ] Claude Code in Action
+- [x] Claude Code in Action
 - [ ] Introduction to Agent Skills
 - [ ] Introduction to Model Context Protocol
 - [ ] Model Context Protocol: Advanced Topics
